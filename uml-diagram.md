@@ -19,16 +19,16 @@ classDiagram
     class Engine{
       +needs_service() bool
     }
-    class CapuletEngine~Engine~{
+    class CapuletEngine<Engine>{
       +int last_service_mileage
       +int current_mileage
       +needs_service() bool
     }
-    class SternmanEngine~Engine~{
+    class SternmanEngine<Engine>{
       +bool is_warning_on
       +needs_service() bool
     }
-    class WilloughbyEngine~Engine~{
+    class WilloughbyEngine<Engine>{
       +int last_service_mileage
       +int current_mileage
       +needs_service() bool
@@ -37,11 +37,11 @@ classDiagram
       +datetime last_service_date
       +needs_service() bool
     }
-    class NubbinBattery~Battery~{
+    class NubbinBattery<Battery>{
       +datetime last_service_date
       +needs_service() bool
     }
-    class SpindlerBattery~Battery~{
+    class SpindlerBattery<Battery>{
       +datetime last_service_date
       +needs_service() bool
     }
@@ -49,11 +49,11 @@ classDiagram
       +sensor_values List<int>
       +needs_service() bool
     }
-    class CarriganTire~Tire~{
+    class CarriganTire<Tire>{
       +sensor_values List<int>
       +needs_service() bool
     }
-    class OctoprimeTire~Tire~{
+    class OctoprimeTire<Tire>{
       +sensor_values List<int>
       +needs_service() bool
     }
