@@ -1,7 +1,7 @@
 import unittest
 
-from tire.model.carrigan import CarriganTire
-from tire.model.octoprime import OctoprimeTire
+from tire.model.carrigan_tire import CarriganTire
+from tire.model.octoprime_tire import OctoprimeTire
 
 
 class TestCarriganTire(unittest.TestCase):

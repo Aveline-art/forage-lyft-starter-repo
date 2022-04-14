@@ -2,7 +2,7 @@ from abc import ABC
 
 
 class Car(ABC):
-    def __init__(self, engine, battery, tire):
+    def __init__(self, engine=None, battery=None, tire=None):
         self.engine = engine
         self.battery = battery
         self.tire = tire
