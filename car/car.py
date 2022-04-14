@@ -9,6 +9,6 @@ class Car(ABC):
 
     def needs_service(self):
         for part in self.parts:
-            if part and part.needs_service():
+            if hasattr(part, 'needs_service') and part.needs_service():
                 return True
         return False
