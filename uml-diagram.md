@@ -63,7 +63,7 @@ classDiagram
 
 - Engine, Battery, and Tire classes and descendent classes are not implemented with a functioning `needs_service()` function (it will be an abstract method).
   - Specific parts, will inherit from the base class and implement its own `needs_service()` function
-- The `needs_service()` function in the Car class exists to check all parts that are in the car at once
+- The `needs_service()` function in the Car class exists to check all parts that are in the car at once. If any parts needs service, it will return true, otherwise false.
 
 ## Requirements
 
