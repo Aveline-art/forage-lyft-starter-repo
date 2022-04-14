@@ -61,10 +61,9 @@ classDiagram
 
 ## Notes
 
-- Engine and Battery classes are not implemented with a functioning `needs_service()` function (it will be an abstract method).
-  - Specific engines and batteries, such as Spindler or Capulet, will be classes that inherit from their related parts class and implement its own `needs_service()` function
-- The `needs_service()` function in a Car class exists to check all parts that are in the car at once, should that function be desirable
-  - In order for this function to work optimally, however, the parts should be collected in some kind of array or dict. However, there are no current plans to implement this optimally.
+- Engine, Battery, and Tire classes and descendent classes are not implemented with a functioning `needs_service()` function (it will be an abstract method).
+  - Specific parts, will inherit from the base class and implement its own `needs_service()` function
+- The `needs_service()` function in the Car class exists to check all parts that are in the car at once
 
 ## Requirements
 
