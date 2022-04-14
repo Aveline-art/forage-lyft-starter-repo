@@ -2,19 +2,60 @@
 classDiagram
     Car ..> Engine
     Car ..> Battery
+    Car ..> Tire
+    Engine <|-- CapuletEngine
+    Engine <|-- SternmanEngine
+    Engine <|-- WilloughbyEngine
+    Battery <|-- NubbinBattery
+    Battery <|-- SpindlerBattery
+    Tire <|-- CarriganTire
+    Tire <|-- OctoprimeTire
     class Car{
-        +Engine engine
-        +Battery battery
-        +needs_service() bool
+      +Engine engine
+      +Battery battery
+      +Tire tire
+      +needs_service() bool
     }
     class Engine{
-        +int mileage
-        +bool is_warning_on
-        +needs_service() bool
+      +needs_service() bool
+    }
+    class CapuletEngine~Engine~{
+      +int last_service_mileage
+      +int current_mileage
+      +needs_service() bool
+    }
+    class SternmanEngine~Engine~{
+      +bool is_warning_on
+      +needs_service() bool
+    }
+    class WilloughbyEngine~Engine~{
+      +int last_service_mileage
+      +int current_mileage
+      +needs_service() bool
     }
     class Battery{
-        +datetime installed_date
-        +needs_service() bool
+      +datetime last_service_date
+      +needs_service() bool
+    }
+    class NubbinBattery~Battery~{
+      +datetime last_service_date
+      +needs_service() bool
+    }
+    class SpindlerBattery~Battery~{
+      +datetime last_service_date
+      +needs_service() bool
+    }
+    class Tire{
+      +sensor_values List<int>
+      +needs_service() bool
+    }
+    class CarriganTire~Tire~{
+      +sensor_values List<int>
+      +needs_service() bool
+    }
+    class OctoprimeTire~Tire~{
+      +sensor_values List<int>
+      +needs_service() bool
     }
 ```
 
