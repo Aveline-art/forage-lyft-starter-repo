@@ -1,7 +1,7 @@
 from abc import ABC
 from car.car import Car
-from engine.capulet_engine import CapuletEngine
-from battery.nubbin_battery import NubbinBattery
+from engine.model.capulet_engine import CapuletEngine
+from battery.model.nubbin_battery import NubbinBattery
 
 
 class Thovex(Car, ABC):

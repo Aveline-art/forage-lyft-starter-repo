@@ -1,7 +1,7 @@
 from abc import ABC
 from car.car import Car
-from engine.sternman_engine import SternmanEngine
-from battery.spindler_battery import SpindlerBattery
+from engine.model.sternman_engine import SternmanEngine
+from battery.model.spindler_battery import SpindlerBattery
 
 
 class Palindrome(Car, ABC):
