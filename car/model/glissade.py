@@ -1,7 +1,7 @@
 from abc import ABC
 from car.car import Car
-from engine.willoughby_engine import WilloughbyEngine
-from battery.spindler_battery import SpindlerBattery
+from engine.model.willoughby_engine import WilloughbyEngine
+from battery.model.spindler_battery import SpindlerBattery
 
 
 class Glissade(Car, ABC):

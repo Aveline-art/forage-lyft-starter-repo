@@ -1,7 +1,7 @@
 from abc import ABC
 from car.car import Car
-from engine.capulet_engine import CapuletEngine
-from battery.spindler_battery import SpindlerBattery
+from engine.model.capulet_engine import CapuletEngine
+from battery.model.spindler_battery import SpindlerBattery
 
 
 class Calliope(Car, ABC):

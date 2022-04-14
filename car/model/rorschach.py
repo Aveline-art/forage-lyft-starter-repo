@@ -1,7 +1,7 @@
 from abc import ABC
 from car.car import Car
-from engine.willoughby_engine import WilloughbyEngine
-from battery.nubbin_battery import NubbinBattery
+from engine.model.willoughby_engine import WilloughbyEngine
+from battery.model.nubbin_battery import NubbinBattery
 
 
 class Rorschach(Car, ABC):
