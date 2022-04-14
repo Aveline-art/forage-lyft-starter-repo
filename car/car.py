@@ -2,14 +2,13 @@ from abc import ABC
 
 
 class Car(ABC):
-    def __init__(self):
-        self.engine = None
-        self.battery = None
+    def __init__(self, engine, battery):
+        self.engine = engine
+        self.battery = battery
+        self.parts = [self.engine, self.battery]
 
     def needs_service(self):
-        if self.engine:
-            should_engine = self.engine.needs_service()
-        if self.battery:
-            should_battery = self.battery.needs_service()
-        if should_engine or should_battery:
-            return True
+        for part in self.parts:
+            if part and part.needs_service():
+                return True
+        return False
