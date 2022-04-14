@@ -8,4 +8,4 @@ class SpindlerBattery(Battery, ABC):
         super().__init__(last_service_date)
 
     def needs_service(self):
-        return datetime.today().date() > self.last_service_date.replace(year=self.last_service_date.year + 2)
+        return datetime.today().date() > self.last_service_date.replace(year=self.last_service_date.year + 3)
